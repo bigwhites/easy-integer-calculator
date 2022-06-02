@@ -2,11 +2,11 @@
 
 bool canPush(char newOp, stack<char>& op)
 {
-    if (op.empty()) return true;  //Õ»¿ÕÖ±½ÓÈë
-    if (newOp == ')') return false; //ÓÒÀ©»Ø²»ÄÜÈëÕ»
+    if (op.empty()) return true;  //æ ˆç©ºç›´æ¥å…¥
+    if (newOp == ')') return false; //å³æ‰©å›ä¸èƒ½å…¥æ ˆ
     int top = op.top();
-    if (newOp == '(' || top == '(') return true; //Õ»¶¥ÊÇÀ¨ºÅ»òÕßÒªÈëÕ»µÄÊÇÀ¨ºÅÖ±½ÓÈë
-    if ((top == '+' || top == '-') && (newOp == '*' || newOp == '/'))  return true; //ĞÂµÄµÄÓÅÏÈ¼¶´óÓÚ¾ÉµÄ ¿ÉÒÔ¼ÌĞøÈë
+    if (newOp == '(' || top == '(') return true; //æ ˆé¡¶æ˜¯æ‹¬å·æˆ–è€…è¦å…¥æ ˆçš„æ˜¯æ‹¬å·ç›´æ¥å…¥
+    if ((top == '+' || top == '-') && (newOp == '*' || newOp == '/'))  return true; //æ–°çš„çš„ä¼˜å…ˆçº§å¤§äºæ—§çš„ å¯ä»¥ç»§ç»­å…¥
     return false;
 }
 
@@ -36,19 +36,20 @@ bool checkPerCh(char* midExp)
     for (int j = 0; j < len; ++j)
     {
         char i = midExp[j];
+        if(i==' ') continue;
         if (isNumber(i)) noNumber = false;
-        if (!isNumber(i)&&!isOp(i)&&i!='('&&i!=')') return false; //²»ÄÜÓĞÆäËû×Ö·û
-        if (isOp(i))  //¼ì²éÔËËã·ûµÄÁ½±ß
+        if (!isNumber(i)&&!isOp(i)&&i!='('&&i!=')') return false; //ä¸èƒ½æœ‰å…¶ä»–å­—ç¬¦
+        if (isOp(i))  //æ£€æŸ¥è¿ç®—ç¬¦çš„ä¸¤è¾¹
         {
             char left = midExp[j - 1];
             char right = midExp[j + 1];
-            if (i == '/') //³ıºÅÓÒ±ß²»ÄÜÊÇ0 µ«ÈôÓÒ±ßÊÇÖµÎª0µÄ×Ó±í´ïÊ½ÔòÎŞ·¨²â³ö »áÔÚ×îÖÕ¼ÆËãÊ±exit(1)
+            if (i == '/') //é™¤å·å³è¾¹ä¸èƒ½æ˜¯0 ä½†è‹¥å³è¾¹æ˜¯å€¼ä¸º0çš„å­è¡¨è¾¾å¼åˆ™æ— æ³•æµ‹å‡º ä¼šåœ¨æœ€ç»ˆè®¡ç®—æ—¶exit(1)
             {
                 if (right == '0') return false;
             }
-            if (isOp(left) || isOp(right)) return false; //Á½±ß¶¼²»ÄÜÎªÔËËã·û
-            if (left == '(' || right == ')') return false;//×ó±ß²»ÄÜÊÇ×óÀ¨ºÅ£¨²»Ö§³Ö¸ºÊı£© ÓÒ±ß²»ÄÜÊÇÓÒÀ¨ºÅ
-            //²»¼ì²éÀ¨ºÅÁ½±ß ÔÊĞíÈßÓàÀ¨ºÅ
+            if (isOp(left) || isOp(right)) return false; //ä¸¤è¾¹éƒ½ä¸èƒ½ä¸ºè¿ç®—ç¬¦
+            if (left == '(' || right == ')') return false;//å·¦è¾¹ä¸èƒ½æ˜¯å·¦æ‹¬å·ï¼ˆä¸æ”¯æŒè´Ÿæ•°ï¼‰ å³è¾¹ä¸èƒ½æ˜¯å³æ‹¬å·
+            //ä¸æ£€æŸ¥æ‹¬å·ä¸¤è¾¹ å…è®¸å†—ä½™æ‹¬å·
         }
 
     }
@@ -57,7 +58,7 @@ bool checkPerCh(char* midExp)
 
 }
 
-bool checkBrackets(char* midExp)   //brackets Ô²À¨ºÅ
+bool checkBrackets(char* midExp)   //brackets åœ†æ‹¬å·
 {
     stack<char> Sbra;
     int len = strlen(midExp);
