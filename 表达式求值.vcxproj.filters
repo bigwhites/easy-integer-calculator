@@ -18,13 +18,16 @@
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="calcLastExp.cpp">
+    <ClCompile Include="calcSuffixExp.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="check.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="MidToLast.cpp">
+    <ClCompile Include="infixToSuffixExp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="cache.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
