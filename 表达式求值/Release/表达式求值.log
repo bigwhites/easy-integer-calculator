@@ -1,0 +1,18 @@
+﻿  cache.cpp
+J:\表达式求值\nead.h(1,1): warning C4828: 文件包含在偏移 0x57b 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
+  calcSuffixExp.cpp
+J:\表达式求值\nead.h(1,1): warning C4828: 文件包含在偏移 0x57b 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
+  check.cpp
+J:\表达式求值\nead.h(1,1): warning C4828: 文件包含在偏移 0x57b 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
+  infixToSuffixExp.cpp
+J:\表达式求值\nead.h(1,1): warning C4828: 文件包含在偏移 0x57b 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
+  main.cpp
+J:\表达式求值\nead.h(1,1): warning C4828: 文件包含在偏移 0x57b 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
+J:\表达式求值\main.cpp(45,20): warning C4475: “printf”: 不可在格式说明符中将长度修饰符“ll”与类型字段字符“f”一起使用
+J:\表达式求值\main.cpp(12,5): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+J:\表达式求值\main.cpp(30,9): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  正在生成代码
+  Previous IPDB not found, fall back to full compilation.
+  All 239 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  表达式求值.vcxproj -> J:\表达式求值\Release\表达式求值.exe
