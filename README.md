@@ -1,7 +1,8 @@
 # easy-integer-calculator
 ## c++实现的控制台简易整数计算器  
   
-    
+ ### 项目当前已经重构 
+ github地址： https://github.com/bigwhites/easy_calculator_v2.0.git
     
 ### **一：简要说明：**  
   
